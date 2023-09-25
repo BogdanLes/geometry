@@ -1,7 +1,7 @@
 package ro.scoalainformala;
 import java.util.Scanner;
 import ro.scoalainformala.menu.Menu;
-
+import ro.scoalainformala.classes.Circle;
 
 public class GeometryMenu {
     public static void main(String[] args) {
@@ -23,7 +23,13 @@ public class GeometryMenu {
                 System.out.println("square");
             } else if("4".equals(item)) {
                 //circle
-                System.out.println("circle");
+                System.out.println("Enter circle radius(cm):");
+                float r = s.nextFloat();
+                Circle c = new Circle();
+                c.setRadius(r);
+                System.out.println("The area of the circle is: " + c.getAreaCircle() + " cm2");
+                System.out.println("The diameter of the circle is: " + c.getDiameterCircle() + " cm");
+                System.out.println("The circumference of the circle is: " + c.getCircumferenceCircle() + " cm");
             } else if("5".equals(item)) {
                 //exit
                 System.out.println("Goodbye!");
