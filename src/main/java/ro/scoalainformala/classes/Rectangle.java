@@ -4,29 +4,23 @@ public class Rectangle {
 
     private float length;
     private float width;
-    private float areaRectangle;
-    private float diagonalRectangle;
-    private float perimeterRectangle;
 
     public void setValues(float l, float w) {
         length = l;
         width = w;
-        areaRectangle = length * width;
-        float dr = length * length + width * width;
-        diagonalRectangle = (float) Math.sqrt(dr);
-        perimeterRectangle = 2 * (length + width);
     }
 
     public float getAreaRectangle() {
-        return areaRectangle;
+        return length * width;
     }
 
     public float getDiagonalRectangle() {
-        return diagonalRectangle;
+        float dr = length * length + width * width;
+        return (float) Math.sqrt(dr);
     }
 
     public float getPerimeterRectangle() {
-        return perimeterRectangle;
+        return 2 * (length + width);
     }
 
 }

@@ -3,27 +3,21 @@ package ro.scoalainformala.classes;
 public class Circle {
 
     private float radius;
-    private float areaCircle;
-    private float diameterCircle;
-    private float circumferenceCircle;
 
     public void setRadius(float rad) {
         radius = rad;
-        areaCircle = 3.14F * radius * radius;
-        diameterCircle = 2 * radius;
-        circumferenceCircle = 2 * 3.14F * radius;
     }
 
     public float getAreaCircle() {
-        return areaCircle;
+        return 3.14F * radius * radius;
     }
 
     public float getDiameterCircle() {
-        return diameterCircle;
+        return 2 * radius;
     }
 
     public float getCircumferenceCircle() {
-        return circumferenceCircle;
+        return 2 * 3.14F * radius;
     }
 
 }

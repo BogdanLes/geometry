@@ -3,27 +3,21 @@ package ro.scoalainformala.classes;
 public class Square {
 
     private float side;
-    private float areaSquare;
-    private float perimeterSquare;
-    private float diagonalSquare;
 
     public void setSide(float sv) {
         side = sv;
-        areaSquare = side * side;
-        perimeterSquare = 4 * side;
-        diagonalSquare = (float) Math.sqrt(2) * side;
     }
 
     public float getAreaSquare() {
-        return areaSquare;
+        return side * side;
     }
 
     public float getPerimeterSquare() {
-        return perimeterSquare;
+        return 4 * side;
     }
 
     public float getDiagonalSquare() {
-        return diagonalSquare;
+        return (float) Math.sqrt(2) * side;
     }
 
 }
