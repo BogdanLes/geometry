@@ -3,10 +3,10 @@ package ro.scoalainformala;
 import java.util.Scanner;
 
 import ro.scoalainformala.menu.Menu;
-import ro.scoalainformala.classes.Circle;
-import ro.scoalainformala.classes.Square;
-import ro.scoalainformala.classes.Rectangle;
-import ro.scoalainformala.classes.Triangle;
+import ro.scoalainformala.shapes.Circle;
+import ro.scoalainformala.shapes.Square;
+import ro.scoalainformala.shapes.Rectangle;
+import ro.scoalainformala.shapes.Triangle;
 import ro.scoalainformala.user.Validate;
 
 public class GeometryMenu {
@@ -52,8 +52,8 @@ public class GeometryMenu {
                 } while (vi == false || (ul3 < 0.1F || ul3 > vertr));
 
                 Triangle tr = new Triangle(ul1, ul2, ul3);
-                System.out.println("The area of the triangle is: " + tr.getAreaTriangle() + " cm2");
-                System.out.println("The perimeter of the triangle is: " + tr.getPerimeterTriangle() + " cm");
+                System.out.println("The area of the triangle is: " + tr.getArea() + " cm2");
+                System.out.println("The perimeter of the triangle is: " + tr.getPerimeter() + " cm");
             } else if ("2".equals(item)) {
                 //rectangle
                 float lr = 0.0F;
@@ -75,10 +75,9 @@ public class GeometryMenu {
                     }
                 } while (vi == false || wr < 0.1F);
 
-                Rectangle re = new Rectangle();
-                re.setValues(lr, wr);
-                System.out.println("The area of the rectangle is: " + re.getAreaRectangle() + " cm2");
-                System.out.println("The perimeter of the rectangle is: " + re.getPerimeterRectangle() + " cm");
+                Rectangle re = new Rectangle(lr, wr);
+                System.out.println("The area of the rectangle is: " + re.getArea() + " cm2");
+                System.out.println("The perimeter of the rectangle is: " + re.getPerimeter() + " cm");
                 System.out.println("The diagonal of the rectangle is: " + re.getDiagonalRectangle() + " cm");
             } else if ("3".equals(item)) {
                 //square
@@ -92,11 +91,10 @@ public class GeometryMenu {
                     }
                 } while (vi == false || ss < 0.1F);
 
-                Square sq = new Square();
-                sq.setSide(ss);
-                System.out.println("The area of the square is: " + sq.getAreaSquare() + " cm2");
-                System.out.println("The perimeter of the square is: " + sq.getPerimeterSquare() + " cm");
-                System.out.println("The diagonal of the square is: " + sq.getDiagonalSquare() + " cm");
+                Rectangle sq = new Square(ss);
+                System.out.println("The area of the square is: " + sq.getArea() + " cm2");
+                System.out.println("The perimeter of the square is: " + sq.getPerimeter() + " cm");
+                System.out.println("The diagonal of the square is: " + sq.getDiagonalRectangle() + " cm");
             } else if ("4".equals(item)) {
                 //circle
                 float r = 0.0F;
@@ -110,10 +108,9 @@ public class GeometryMenu {
                 } while (vi == false || r < 0.1F);
 
                 Circle c = new Circle();
-                c.setRadius(r);
-                System.out.println("The area of the circle is: " + c.getAreaCircle() + " cm2");
+                System.out.println("The area of the circle is: " + c.getArea() + " cm2");
                 System.out.println("The diameter of the circle is: " + c.getDiameterCircle() + " cm");
-                System.out.println("The circumference of the circle is: " + c.getCircumferenceCircle() + " cm");
+                System.out.println("The circumference of the circle is: " + c.getPerimeter() + " cm");
             } else if ("5".equals(item)) {
                 //exit
                 System.out.println("Goodbye!");

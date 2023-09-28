@@ -1,16 +1,22 @@
-package ro.scoalainformala.classes;
+package ro.scoalainformala.shapes;
 
-public class Rectangle {
+public class Rectangle extends Shape {
 
     private float length;
     private float width;
+
+    public Rectangle(float length, float width) {
+        this.length = length;
+        this.width = width;
+    }
 
     public void setValues(float l, float w) {
         length = l;
         width = w;
     }
 
-    public float getAreaRectangle() {
+    @Override
+    public float getArea() {
         return length * width;
     }
 
@@ -19,8 +25,8 @@ public class Rectangle {
         return (float) Math.sqrt(dr);
     }
 
-    public float getPerimeterRectangle() {
+    @Override
+    public float getPerimeter() {
         return 2 * (length + width);
     }
-
 }

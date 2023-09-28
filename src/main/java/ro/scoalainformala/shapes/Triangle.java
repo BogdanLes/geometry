@@ -1,6 +1,6 @@
-package ro.scoalainformala.classes;
+package ro.scoalainformala.shapes;
 
-public class Triangle {
+public class Triangle extends Shape {
 
     private float l1;
     private float l2;
@@ -12,12 +12,14 @@ public class Triangle {
         this.l3 = vl3;
     }
 
-    public float getAreaTriangle() {
-        float sm = getPerimeterTriangle() / 2;
+    @Override
+    public float getArea() {
+        float sm = getPerimeter() / 2;
         return (float) Math.sqrt(sm * (sm - l1) * (sm - l2) * (sm - l3));
     }
 
-    public float getPerimeterTriangle() {
+    @Override
+    public float getPerimeter() {
         return l1 + l2 + l3;
     }
 
